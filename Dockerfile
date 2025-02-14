@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir Flask==2.0.2 Werkzeug==2.0.3
 
 # Exposer le port 5000
-EXPOSE 5000
+EXPOSE 8000
 
 # Commande pour démarrer l’application
 CMD ["python", "app.py"]
