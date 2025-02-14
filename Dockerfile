@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Installer des versions spécifiques pour éviter les conflits
 RUN pip install --no-cache-dir Flask==2.0.2 Werkzeug==2.0.3
 
-# Exposer le port 5000
+# Exposer le port 8000
 EXPOSE 8000
 
 # Commande pour démarrer l’application
