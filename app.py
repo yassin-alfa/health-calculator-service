@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, request, jsonify, send_from_directory
 from health_utils import calculate_bmi, calculate_bmr
 import os
@@ -20,35 +19,12 @@ def bmi():
     if not weight or not height:
         return jsonify({"error": "Missing weight or height"}), 400
 
-=======
-from flask import Flask, request, jsonify
-from health_utils import calculate_bmi, calculate_bmr
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return jsonify({"message": "Bienvenue sur l'API Health Calculator! Utilisez /bmi ou /bmr."})
-
-@app.route('/bmi', methods=['POST'])
-def bmi():
-    data = request.get_json()
-    weight = data.get('weight')
-    height = data.get('height')
-    
-    if not weight or not height:
-        return jsonify({"error": "Missing weight or height"}), 400
-    
->>>>>>> 72048be (ajout des fichiers)
     bmi_value = calculate_bmi(height, weight)
     return jsonify({"BMI": bmi_value})
 
 @app.route('/bmr', methods=['POST'])
 def bmr():
-<<<<<<< HEAD
     """Calculer le BMR à partir des données envoyées."""
-=======
->>>>>>> 72048be (ajout des fichiers)
     data = request.get_json()
     weight = data.get('weight')
     height = data.get('height')
