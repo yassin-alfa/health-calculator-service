@@ -38,7 +38,5 @@ def bmr():
     return jsonify({"BMR": bmr_value})
 
 if __name__ == '__main__':
-    import os
-port = int(os.environ.get("PORT", 8000))
-app.run(host='0.0.0.0', port=port)
-
+    port = int(os.environ.get("PORT", 8000))  # ✅ Corrigé ici
+    app.run(host='0.0.0.0', port=port)
